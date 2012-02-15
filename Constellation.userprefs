@@ -1,8 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Web.config">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Views/Home/Index.aspx">
     <Files>
-      <File FileName="Web/Web.config" Line="1" Column="1" />
+      <File FileName="Web/Controllers/HomeController.cs" Line="8" Column="47" />
+      <File FileName="Web/Controllers/DestkopController.cs" Line="8" Column="47" />
+      <File FileName="Web/Views/Home/Index.aspx" Line="24" Column="62" />
+      <File FileName="Web/Views/Desktop/Index.aspx" Line="31" Column="8" />
+      <File FileName="Web/Global.asax.cs" Line="25" Column="2" />
+      <File FileName="Web/Global.asax" Line="1" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
