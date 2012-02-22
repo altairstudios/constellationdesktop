@@ -8,7 +8,7 @@
 	    <link rel="stylesheet" type="text/css" href="Content/resources/css/ext-all.css" />
 	    <link rel="stylesheet" type="text/css" href="Content/css/desktop.css" />
 
-	    <script type="text/javascript" src="Content/builds/ext-core-dev.js"></script>
+	    <script type="text/javascript" src="Content/ext-all.js"></script>
 	    <script type="text/javascript" src="Content/classes.js"></script>
 
 	    <script type="text/javascript">
@@ -41,27 +41,16 @@ Ext.onReady(function() {
         items: [{
             items: [{
                 xtype:'textfield',
-                fieldLabel: 'First Name',
-                anchor: '-5',
-                name: 'first'
-            }, {
-                xtype:'textfield',
-                fieldLabel: 'Company',
-                anchor: '-5',
-                name: 'company'
-            }]
-        }, {
-            items: [{
-                xtype:'textfield',
-                fieldLabel: 'Last Name',
-                anchor: '100%',
-                name: 'last'
-            },{
-                xtype:'textfield',
                 fieldLabel: 'Email',
                 anchor: '100%',
+                name: 'first',
+				vtype:'email'
+            }, {
+                xtype:'textfield',
+                fieldLabel: 'Contraseña',
+                anchor: '100%',
                 name: 'email',
-                vtype:'email'
+                vtype:'password'
             }]
         }],
         buttons: ['->', {
