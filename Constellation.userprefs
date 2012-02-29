@@ -1,14 +1,41 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Views/Home/Index.aspx">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/Controllers/AccountController.cs">
     <Files>
-      <File FileName="Web/Controllers/HomeController.cs" Line="8" Column="47" />
-      <File FileName="Web/Controllers/DestkopController.cs" Line="8" Column="47" />
-      <File FileName="Web/Views/Home/Index.aspx" Line="24" Column="62" />
-      <File FileName="Web/Views/Desktop/Index.aspx" Line="31" Column="8" />
-      <File FileName="Web/Global.asax.cs" Line="25" Column="2" />
-      <File FileName="Web/Global.asax" Line="1" Column="49" />
+      <File FileName="Web/Web.config" Line="11" Column="73" />
+      <File FileName="Web/Views/Desktop/Index.aspx" Line="33" Column="8" />
+      <File FileName="Web/Content/js/Desktop.js" Line="7" Column="32" />
+      <File FileName="Web/Content/App.js" Line="85" Column="33" />
+      <File FileName="Web/Content/js/Wallpaper.js" Line="34" Column="1" />
+      <File FileName="Web/Content/WallpaperModel.js" Line="1" Column="1" />
+      <File FileName="Web/Content/Settings.js" Line="122" Column="43" />
+      <File FileName="Web/Models/User.cs" Line="41" Column="4" />
+      <File FileName="Web/Views/Home/Index.aspx" Line="48" Column="10" />
+      <File FileName="Web/Global.asax.cs" Line="15" Column="28" />
+      <File FileName="Web/Controllers/HomeController.cs" Line="15" Column="4" />
+      <File FileName="Web/Controllers/AccountController.cs" Line="18" Column="6" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Web" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
+            <Node name="Content" expanded="True">
+              <Node name="builds" expanded="True" />
+              <Node name="js" expanded="True" />
+              <Node name="resources" expanded="True" />
+            </Node>
+            <Node name="Controllers" expanded="True" />
+            <Node name="Models" expanded="True" />
+            <Node name="Views" expanded="True">
+              <Node name="Desktop" expanded="True" />
+              <Node name="Home" expanded="True" />
+            </Node>
+            <Node name="Global.asax" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
