@@ -82,7 +82,7 @@ Ext.define('MyDesktop.App', {
                 ]
             }),
 
-            wallpaper: 'wallpapers/Blue-Sencha.jpg',
+            wallpaper: 'Content/wallpapers/Blue-Sencha.jpg',
             wallpaperStretch: false
         });
     },
@@ -92,7 +92,7 @@ Ext.define('MyDesktop.App', {
         var me = this, ret = me.callParent();
 
         return Ext.apply(ret, {
-            title: 'Don Griffin',
+            title: 'Don Griffin 2',
             iconCls: 'user',
             height: 300,
             toolConfig: {

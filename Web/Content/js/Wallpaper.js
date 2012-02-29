@@ -30,7 +30,7 @@ Ext.define('Ext.ux.desktop.Wallpaper', {
     alias: 'widget.wallpaper',
 
     cls: 'ux-wallpaper',
-    html: '<img src="'+Ext.BLANK_IMAGE_URL+'">',
+    html: '<img src="Content/'+Ext.BLANK_IMAGE_URL+'">',
 
     stretch: false,
     wallpaper: null,

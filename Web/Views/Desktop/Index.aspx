@@ -8,13 +8,14 @@
 	    <link rel="stylesheet" type="text/css" href="Content/resources/css/ext-all.css" />
 	    <link rel="stylesheet" type="text/css" href="Content/css/desktop.css" />
 
-	    <script type="text/javascript" src="Content/builds/ext-core.js"></script>
-	    <script type="text/javascript" src="Content/classes.js"></script>
-
+	    <script type="text/javascript" src="Scripts/ext-all.js"></script>
+	
+	
 	    <script type="text/javascript">
+	    Ext.Loader.setConfig({enabled:true});
 	        Ext.Loader.setPath({
-	            'Ext.ux.desktop': 'js',
-	            MyDesktop: ''
+	            'Ext.ux.desktop': 'Content/js/',
+	            MyDesktop: 'Content/'
 	        });
 	
 	        Ext.require('MyDesktop.App');
@@ -23,6 +24,7 @@
 	        Ext.onReady(function () {
 	            myDesktopApp = new MyDesktop.App();
 	        });
+	        
 	    </script>
 	</head>
 	<body>

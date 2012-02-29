@@ -165,7 +165,7 @@ Ext.define('MyDesktop.Settings', {
     setInitialSelection: function () {
         var s = this.desktop.getWallpaper();
         if (s) {
-            var path = 'Content/wallpaper/' + this.getTextOfWallpaper(s);
+            var path = 'Content/wallpapers/' + this.getTextOfWallpaper(s);
             this.tree.selectPath(path, 'text');
         }
     }

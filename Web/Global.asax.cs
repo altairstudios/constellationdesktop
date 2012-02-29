@@ -9,7 +9,13 @@ namespace Web {
 	public class MvcApplication : System.Web.HttpApplication {
 		public static void RegisterRoutes(RouteCollection routes) {
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+			
+			routes.MapRoute(
+                "Login",
+                "Home/Login",
+                new { controller = "Home", action = "Login", id = "" }
+            );
+			
 			routes.MapRoute(
                 "Default",
                 "{controller}/{action}/{id}",

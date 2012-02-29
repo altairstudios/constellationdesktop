@@ -12,54 +12,91 @@
 	    <script type="text/javascript" src="Content/classes.js"></script>
 
 	    <script type="text/javascript">
-	    Ext.Loader.setConfig({enabled:true});
-	    Ext.Loader.setPath('Ext.ux', 'Content/builds/');
-	    
+		    Ext.Loader.setConfig({enabled:true});
+		    Ext.Loader.setPath('Ext.ux', 'Content/builds/');
+		    
 	        Ext.require([
-    'Ext.form.Panel',
-    'Ext.layout.container.Anchor'
-]);
+			    'Ext.form.Panel',
+			    'Ext.layout.container.Anchor'
+			]);
+			
+			var window;
 
-Ext.onReady(function() {
-    Ext.create('Ext.form.Panel', {
-        renderTo: Ext.getBody(),
-        title: 'Form Panel',
-        bodyStyle: 'padding:5px 5px 0',
-        width: 600,
-        fieldDefaults: {
-            labelAlign: 'top',
-            msgTarget: 'side'
-        },
-        defaults: {
-            border: false,
-            xtype: 'panel',
-            flex: 1,
-            layout: 'anchor'
-        },
-
-        layout: 'hbox',
-        items: [{
-            items: [{
-                xtype:'textfield',
-                fieldLabel: 'Email',
-                anchor: '100%',
-                name: 'first',
-				vtype:'email'
-            }, {
-                xtype:'textfield',
-                fieldLabel: 'Contraseña',
-                anchor: '100%',
-                name: 'email',
-                vtype:'password'
-            }]
-        }],
-        buttons: ['->', {
-            text: 'Save'
-        }, {
-            text: 'Cancel'
-        }]
-    });
-});
+			Ext.onReady(function() {
+				var panel = Ext.create('Ext.form.Panel', {
+			        //renderTo: Ext.getBody(),
+			        title: 'Introduzca sus datos de acceso',
+			        bodyStyle: 'padding:5px 5px 0',
+			        width: '100%',
+			        fieldDefaults: {
+			            labelAlign: 'top',
+			            msgTarget: 'side'
+			        },
+			        defaults: {
+			            border: false,
+			            xtype: 'panel',
+			            flex: 1,
+			            layout: 'anchor'
+			        },
+			        layout: 'hbox',
+			        items: [{
+			            items: [{
+			                xtype:'textfield',
+			                fieldLabel: 'Usuario',
+			                anchor: '100%',
+			                name: 'first',
+							//vtype:'text',
+							id: 'user'
+			            }, {
+			                xtype:'textfield',
+			                fieldLabel: 'Contraseña',
+			                anchor: '100%',
+			                name: 'password',
+			                //vtype:'password',
+			                id: 'password'
+			            }]
+			        }],
+			        buttons: ['->', {
+			            text: 'Acceder',
+			            handler: function() {
+							Ext.Ajax.request({
+							   url: 'Home/Login',
+							   success: function (response) {
+									x = Ext.decode( response.responseText );
+									alert(x);
+									document.location = "Desktop";
+								},
+							   failure: function () { console.log('failure');},
+							   headers: {
+							       'my-header': 'foo'
+							   },
+							   params: { Name: Ext.getCmp('user').getValue(), Password: Ext.getCmp('password').getValue() }
+							});
+			            }
+			        }]
+			    });
+			    
+			    
+			    
+				win = Ext.create('widget.window', {
+	                title: 'Acceso',
+	                closable: true,
+	                closeAction: 'hide',
+	                //animateTarget: this,
+	                width: 600,
+	                /*height: 350,*/
+	                layout: 'border',
+	                bodyStyle: 'padding: 5px;',
+	                items: [{
+	                    region: 'center',
+	                    items: [panel]
+	                }]
+	            });
+			
+			    
+			    
+			    win.show();
+			});
 	        
 	    </script>
 	</head>
